@@ -1,15 +1,35 @@
-# Unfiltered human PBMCs (10X Genomics)
+---
+title: "Unfiltered human PBMCs (10X Genomics)"
+author: "Aedin Culhane, Michael Lynch, Maria Doyle"
+date: "Dec 2nd, 2022"
+output:
+  rmarkdown::html_document:
+    highlight: pygments
+    toc: true
+    toc_depth: 3
+    fig_width: 5
+vignette: >
+  %\VignetteIndexEntry{tenx-unfiltered-pbmc4k}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding[utf8]{inputenc}
 
-```{r unref-setup, cache=FALSE, echo=FALSE, results="asis"}
-library(rebook)
-chapterPreamble(cache=TRUE)
+---
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+# Set up the environment
+opts_chunk$set(echo=TRUE, dpi=100, warnings=FALSE, message=FALSE, warning=FALSE, fig.width = 10, fig.height = 6) 
 ```
+
+
+
 
 ## Introduction
 
 Here, we describe a brief analysis of the peripheral blood mononuclear cell (PBMC) dataset from 10X Genomics [@zheng2017massively].
 The data are publicly available from the [10X Genomics website](https://support.10xgenomics.com/single-cell-gene-expression/datasets/2.1.0/pbmc4k),
 from which we download the raw gene/barcode count matrices, i.e., before cell calling from the _CellRanger_ pipeline.
+
+This tutorial is edited and extracted from the OSCA Unfiltered human PBMCs workflow [tenx.unfiltered-pbmc4k.Rmd](https://github.com/OSCA-source/OSCA.workflows/blob/master/inst/book/tenx-unfiltered-pbmc4k.Rmd)
 
 ## Data loading
 
