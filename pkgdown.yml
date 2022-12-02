@@ -1,0 +1,10 @@
+pandoc: 2.19.2
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  tenx-unfiltered-pbmc4k: tenx-unfiltered-pbmc4k.html
+last_built: 2022-12-02T18:02Z
+urls:
+  reference: https://aedin.github.io/scRNAseqBasicWorkflow/reference
+  article: https://aedin.github.io/scRNAseqBasicWorkflow/articles
+
