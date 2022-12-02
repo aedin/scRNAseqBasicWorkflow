@@ -369,5 +369,5 @@ lines(SlingshotDataSet(slc), lwd = 2, col = 'black')
 ## Session Info {-}
 
 ```{r sessionInfo, echo=FALSE, results='asis'}
-prettySessionInfo()
+sessionInfo()
 ```

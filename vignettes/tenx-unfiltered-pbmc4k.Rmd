@@ -214,5 +214,5 @@ plotExpression(sce.pbmc, features=c("CD14", "CD68",
 ## Session Info {-}
 
 ```{r sessionInfo, echo=FALSE, results='asis'}
-prettySessionInfo()
+sessionInfo()
 ```
