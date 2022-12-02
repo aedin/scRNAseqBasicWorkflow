@@ -1,0 +1,61 @@
+Package: scRNAseqBasicWorkflow
+Title: scRNAseqBasicWorkflow created from the unfiltered PMBC OSCA Workflow
+Version: 0.99
+Date: 2022-12-02
+Authors@R: c( 
+        person(given = "Aedin", family = "Culhane",
+             role = c("aut", "cre"),
+             email = "aedin.culhane@ul.ie",
+             comment = c(ORCID = "0000-0002-1395-9734")),
+        person('Michael', 'Lynch', role = 'aut') 
+    )
+Description: 
+    A short workflow with a basic scRNAseq workflow extracted and extended from the Unfiltered human PBMCs (10X Genomics) workflows in the "Orchestrating Single Cell Analysis with Bioconductor" book.
+    This was cloned from https://github.com/OSCA-source/OSCA.workflows, edited and extended.
+Depends: AnnotationHub,
+    batchelor,
+    Biobase,
+    BiocFileCache,
+    BiocNeighbors,
+    BiocParallel,
+    BiocSingular,
+    bluster,
+    celldex,
+    cluster,
+    DropletTestFiles,
+    DropletUtils,
+    dynamicTreeCut,
+    edgeR,
+    EnsDb.Hsapiens.v86,
+    gridExtra,
+    HCAData,
+    igraph,
+    limma,
+    org.Hs.eg.db,
+    org.Mm.eg.db,
+    pheatmap,
+    rebook,
+    rmarkdown,
+    scater,
+    scPCA,
+    scran,
+    scRNAseq,
+    scuttle,
+    SingleR,
+    viridis
+Suggests: 
+    BiocManager,
+    rmarkdown,
+    knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+URL: https://github.com/aedin/scRNAseqBasicWorkflow/
+BugReports: https://github.com/aedin/scRNAseqBasicWorkflow/issues/new/choose
+DockerImage: aculhane/scRNAseqBasicWorkflow:latest
+VignetteBuilder: knitr
+biocViews: 
+    Workflow, 
+    SingleCellWorkflow
