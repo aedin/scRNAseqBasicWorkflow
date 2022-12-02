@@ -28,7 +28,7 @@ This is a fairly big dataset that represents a good use case for the techniques 
 
 ## Data loading
 
-This dataset is loaded via the `r Biocpkg("HCAData")` package, which provides a ready-to-use `SingleCellExperiment` object. 
+This dataset is loaded via the [HCAData](https://bioconductor.org/packages/3.16/data/experiment/html/HCAData.html) package, which provides a ready-to-use `SingleCellExperiment` object. 
 
 ```{r loading}
 library(HCAData)
