@@ -1,0 +1,87 @@
+---
+title: "R basics"
+format: revealjs
+editor: visual
+---
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+# Set up the environment
+opts_chunk$set(echo=TRUE, eval=FALSE, dpi=100, warnings=FALSE, message=FALSE, warning=FALSE, fig.width = 10, fig.height = 6) 
+```
+
+## A simple calculator
+
+```{r}
+1 + 1
+```
+
+## 'Vectors' as building blocks
+
+```{r}
+c(1, 2, 3)
+c("January", "February", "March")
+c(TRUE, FALSE)
+```
+
+## Variables, missing values and 'factors'
+
+```{r}
+age <- c(27, NA, 32, 29)
+gender <- factor(
+    c("Female", "Male", "Non-binary", NA),
+    levels = c("Female", "Male", "Non-binary")
+)
+```
+
+## Data structures
+
+to coordinate related vectors -- the `data.frame`
+
+```{r}
+df <- data.frame(
+    age = c(27, NA, 32, 29),
+    gender = gender
+)
+df
+```
+
+## Key operations on `data.frame`
+
+```{r}
+# Select columns
+df$age
+
+# Subset on rows and columns
+df[1:3, c("gender", "age")]
+```
+
+
+## Packages
+
+Extend functionality of base *R*. Can be part of the 'base' distribution...
+
+### Where do Packages Come From?
+
+-   \[CRAN\]\[\]: *C*omprehensive *R* *A*rchive *N*etwork. More than 18,000 packages. Some help from \[CRAN Task Views\]\[\] in identifying relevant packages.
+
+-   \[Bioconductor\]\[\]: More than 2100 packages relevant to high-throughput genomic analysis. *Vignettes* are an important part of *Bioconductor* packages.
+
+## Install packages once per *R* installation, using
+
+```{r eval=FALSE}
+BiocManager::install(<package-name>)` (CRAN or Bioconductor)
+```
+
+## Help & Vignettes
+
+1.  Help pages, e.g., `?lm`
+
+2.  Vignettes, e.g.,
+
+```{r, eval = FALSE}
+vignette(package = "ggplot2")
+vignette("ggplot2-specs", "ggplot2")
+```
+
+3.  Google, StackOverflow, etc...
